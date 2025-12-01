@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Calendar - Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #11141F; /* Bleu Nuit */
+            color: white;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 { color: #8F46EE; /* Violet */ }
+        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; }
+        
+        /* Style du Formulaire */
+        .contact-box {
+            background-color: #1C212E; /* Carte Sombre */
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ccc;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background-color: #11141F;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: white;
+            box-sizing: border-box; /* Important pour les marges */
+            font-size: 16px;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #8F46EE;
+        }
+        
+        button {
+            background: linear-gradient(90deg, #8F46EE, #F33D9F);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        a { color: #F33D9F; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>TV Calendar</h1>
+    <p>Bienvenue sur la page de support officielle.</p>
+
+    <div class="contact-box">
+        <h2>📞 Nous contacter</h2>
+        <p>Vous avez rencontré un bug ? Vous avez une suggestion ? Remplissez ce formulaire et nous vous répondrons par email.</p>
+        
+        <form action="https://formspree.io/f/xkgdbgdb" method="POST">
+            
+            <label>Votre Email :</label>
+            <input type="email" name="email" placeholder="exemple@icloud.com" required>
+            
+            <label>Sujet :</label>
+            <input type="text" name="subject" placeholder="Bug, Suggestion..." required>
+            
+            <label>Message :</label>
+            <textarea name="message" rows="5" placeholder="Décrivez votre problème..." required></textarea>
+            
+            <button type="submit">Envoyer le message</button>
+        </form>
+    </div>
+
+    <h2>🔒 Politique de Confidentialité</h2>
+    <p><strong>Dernière mise à jour : 27 Novembre 2025</strong></p>
+    <p>TV Calendar respecte votre vie privée.</p>
+    <ul>
+        <li><strong>Données :</strong> Vos séries et votre progression sont stockées uniquement sur votre appareil et synchronisées via votre compte iCloud personnel (CloudKit).</li>
+        <li><strong>Tiers :</strong> Nous n'avons aucun accès à vos données de visionnage. Nous ne vendons aucune donnée.</li>
+        <li><strong>Contact :</strong> Si vous utilisez le formulaire ci-dessus, votre email ne sera utilisé que pour vous répondre.</li>
+    </ul>
+    
+</body>
+</html>
