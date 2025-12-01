@@ -3,103 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Calendar - Support</title>
+    <title>TV Calendar - Support & Confidentialité</title>
     <style>
+        :root {
+            --bg-color: #11141F;
+            --card-color: #1C212E;
+            --text-color: #E0E0E0;
+            --accent-purple: #8F46EE;
+            --accent-pink: #F33D9F;
+            --border-color: #333;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #11141F; /* Bleu Nuit */
-            color: white;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-        h1 { color: #8F46EE; /* Violet */ }
-        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; }
-        
-        /* Style du Formulaire */
-        .contact-box {
-            background-color: #1C212E; /* Carte Sombre */
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+        h1 { 
+            color: var(--accent-purple); 
+            text-align: center;
+            margin-bottom: 40px;
         }
-        
+
+        h2 { 
+            color: var(--accent-pink); 
+            border-bottom: 1px solid var(--border-color); 
+            padding-bottom: 10px; 
+            margin-top: 40px; 
+        }
+
+        p, li { margin-bottom: 15px; }
+        a { color: var(--accent-purple); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+
+        /* --- STYLE DU FORMULAIRE --- */
+        .contact-box {
+            background-color: var(--card-color);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+        }
+
         label {
             display: block;
             margin-bottom: 8px;
-            font-weight: bold;
-            color: #ccc;
+            font-weight: 600;
+            color: #fff;
         }
-        
+
         input, textarea {
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
-            background-color: #11141F;
-            border: 1px solid #333;
-            border-radius: 6px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             color: white;
-            box-sizing: border-box; /* Important pour les marges */
+            box-sizing: border-box;
             font-size: 16px;
+            font-family: inherit;
         }
-        
+
         input:focus, textarea:focus {
             outline: none;
-            border-color: #8F46EE;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 2px rgba(143, 70, 238, 0.2);
         }
-        
+
         button {
-            background: linear-gradient(90deg, #8F46EE, #F33D9F);
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
+            padding: 14px 28px;
+            border-radius: 8px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
+            width: 100%;
             transition: opacity 0.2s;
         }
+
+        button:hover { opacity: 0.9; }
+
+        /* --- STYLE DE LA POLITIQUE --- */
+        .policy-section { margin-top: 50px; }
         
-        button:hover {
-            opacity: 0.9;
+        .highlight { 
+            background-color: var(--card-color); 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 4px solid var(--accent-pink);
+            margin-bottom: 30px;
         }
-        
-        a { color: #F33D9F; text-decoration: none; }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
+
     <h1>TV Calendar</h1>
-    <p>Bienvenue sur la page de support officielle.</p>
 
     <div class="contact-box">
-        <h2>📞 Nous contacter</h2>
-        <p>Vous avez rencontré un bug ? Vous avez une suggestion ? Remplissez ce formulaire et nous vous répondrons par email.</p>
+        <h2 style="margin-top: 0; border: none; color: white;">📞 Support & Contact</h2>
+        <p>Vous avez rencontré un bug ? Vous avez une idée de fonctionnalité ? Remplissez ce formulaire et nous vous répondrons rapidement.</p>
         
         <form action="https://formspree.io/f/xkgdbgdb" method="POST">
             
-            <label>Votre Email :</label>
-            <input type="email" name="email" placeholder="exemple@icloud.com" required>
+            <label for="email">Votre Email :</label>
+            <input type="email" id="email" name="email" placeholder="exemple@icloud.com" required>
             
-            <label>Sujet :</label>
-            <input type="text" name="subject" placeholder="Bug, Suggestion..." required>
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" placeholder="Bug, Question, Suggestion..." required>
             
-            <label>Message :</label>
-            <textarea name="message" rows="5" placeholder="Décrivez votre problème..." required></textarea>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre demande..." required></textarea>
             
             <button type="submit">Envoyer le message</button>
         </form>
     </div>
 
-    <h2>🔒 Politique de Confidentialité</h2>
-    <p><strong>Dernière mise à jour : 27 Novembre 2025</strong></p>
-    <p>TV Calendar respecte votre vie privée.</p>
-    <ul>
-        <li><strong>Données :</strong> Vos séries et votre progression sont stockées uniquement sur votre appareil et synchronisées via votre compte iCloud personnel (CloudKit).</li>
-        <li><strong>Tiers :</strong> Nous n'avons aucun accès à vos données de visionnage. Nous ne vendons aucune donnée.</li>
-        <li><strong>Contact :</strong> Si vous utilisez le formulaire ci-dessus, votre email ne sera utilisé que pour vous répondre.</li>
-    </ul>
-    
+    <div class="policy-section">
+        <h2>🔒 Politique de Confidentialité</h2>
+        <p><strong>Dernière mise à jour : 27 novembre 2025</strong></p>
+
+        <div class="highlight">
+            <p><strong>En résumé :</strong> Nous respectons votre vie privée. TV Calendar ne vend aucune donnée. Vos données de séries sont stockées sur votre compte iCloud personnel et nous n'y avons pas accès.</p>
+        </div>
+
+        <h3>1. Stockage et Synchronisation (iCloud)</h3>
+        <p>TV Calendar utilise <strong>Apple CloudKit</strong> pour stocker et synchroniser vos données (séries ajoutées, épisodes vus) entre vos appareils.</p>
+        <ul>
+            <li>Vos données sont stockées dans un conteneur privé sur les serveurs d'Apple.</li>
+            <li><strong>Le développeur n'a aucun accès</strong> à ces données. Seul vous pouvez y accéder via votre identifiant Apple.</li>
+            <li>La gestion de la sécurité de ces données est assurée par Apple selon leurs standards de confidentialité.</li>
+        </ul>
+
+        <h3>2. Collecte de Données</h3>
+        <p>L'application ne collecte aucune donnée personnelle identifiante (nom, email, localisation) à des fins publicitaires ou commerciales.</p>
+        <p>L'application n'utilise aucun traceur publicitaire (No Ads) et aucun système d'analyse comportementale (No Analytics).</p>
+
+        <h3>3. Services Tiers et APIs</h3>
+        <p>Pour fournir les informations sur les séries, l'application interroge des services publics tiers. Lors d'une recherche ou d'une mise à jour, certaines données techniques (adresse IP, terme de recherche) sont transmises à ces services :</p>
+        <ul>
+            <li><strong>TVMaze :</strong> Pour les dates de diffusion et la structure des épisodes.</li>
+            <li><strong>TMDB (The Movie Database) :</strong> Pour les images et les résumés.</li>
+            <li><strong>Instance de Traduction :</strong> Pour la traduction automatique des résumés (texte uniquement).</li>
+        </ul>
+        <p>Ces services sont utilisés uniquement pour afficher du contenu et ne sont pas utilisés pour vous profiler.</p>
+
+        <h3>4. Droits de l'utilisateur (RGPD / CCPA)</h3>
+        <p>Puisque vos données sont stockées sur votre propre compte iCloud :</p>
+        <ul>
+            <li>Vous pouvez <strong>supprimer</strong> toutes vos données à tout moment en supprimant l'application ou via les réglages iCloud de votre appareil.</li>
+            <li>Vous pouvez <strong>exporter</strong> ou gérer vos données via les outils de confidentialité fournis par Apple.</li>
+        </ul>
+
+        <h3>5. Contact</h3>
+        <p>Pour toute question concernant cette politique de confidentialité ou pour le support, vous pouvez utiliser le formulaire ci-dessus ou nous écrire directement :</p>
+        <p>📧 Email : <a href="mailto:tvcal.colt539@simplelogin.com">tvcal.colt539@simplelogin.com</a></p>
+        <p>🌐 GitHub : <a href="https://github.com/diabolino/TV_Calendar_contact">https://github.com/diabolino/TV_Calendar_contact</a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 TV Calendar. Fait avec passion.
+    </div>
+
 </body>
 </html>
